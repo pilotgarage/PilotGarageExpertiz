@@ -10,39 +10,33 @@
         * { box-sizing: border-box; font-family: 'Segoe UI', Tahoma, sans-serif; -webkit-tap-highlight-color: transparent; }
         body { margin: 0; background-color: var(--pg-dark); color: #fff; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
 
-        /* Üst Bar */
         header { width: 100%; background: #000; padding: 15px; text-align: center; border-bottom: 2px solid var(--pg-yellow); position: sticky; top: 0; z-index: 100; }
         .logo-svg { height: 35px; }
 
         .wrapper { width: 100%; max-width: 420px; padding: 20px; margin-top: 20px; }
 
-        /* Ana Kart */
         .main-card { background: var(--pg-card); border-radius: 20px; padding: 25px; box-shadow: 0 15px 40px rgba(0,0,0,0.6); border: 1px solid #333; text-align: center; }
 
         h2 { font-size: 20px; margin-top: 0; color: var(--pg-yellow); text-transform: uppercase; }
         p.sub { font-size: 14px; color: #999; margin-bottom: 25px; }
 
-        /* Giriş Alanı */
         .input-group { position: relative; margin-bottom: 20px; }
         .input-group input { width: 100%; padding: 18px; background: #000; border: 1px solid #444; border-radius: 12px; color: #fff; font-size: 18px; font-weight: 700; text-align: center; text-transform: uppercase; }
         .input-group input:focus { border-color: var(--pg-yellow); outline: none; box-shadow: 0 0 10px rgba(255, 210, 0, 0.2); }
 
-        .btn { display: block; width: 100%; padding: 18px; border-radius: 12px; border: none; font-size: 16px; font-weight: 800; cursor: pointer; transition: 0.3s; text-decoration: none; text-transform: uppercase; }
+        .btn { display: block; width: 100%; padding: 18px; border-radius: 12px; border: none; font-size: 16px; font-weight: 800; cursor: pointer; transition: 0.3s; text-decoration: none; text-transform: uppercase; text-align: center; }
         .btn-main { background: var(--pg-yellow); color: #000; margin-bottom: 15px; }
         .btn-main:active { transform: scale(0.97); }
 
-        /* Durumlar */
         #loader, #result { display: none; }
         
-        /* Progress Bar */
         .progress-container { width: 100%; background: #333; border-radius: 10px; height: 10px; margin: 20px 0; overflow: hidden; }
-        .progress-bar { width: 0%; height: 100%; background: var(--pg-yellow); transition: width 0.3s; }
+        .progress-bar { width: 0%; height: 100%; background: var(--pg-yellow); transition: width 0.2s; }
 
-        /* Sonuç Ekranı */
         .success-box { background: rgba(50, 215, 75, 0.1); border: 1px solid #32D74B; border-radius: 15px; padding: 15px; margin-bottom: 20px; display: flex; align-items: center; gap: 15px; text-align: left; }
         .success-box i { font-size: 24px; color: #32D74B; }
 
-        .footer-info { font-size: 11px; color: #555; margin-top: 30px; line-height: 1.4; }
+        .footer-info { font-size: 11px; color: #555; margin-top: 30px; line-height: 1.4; text-align: center; }
         .secure-tag { display: inline-flex; align-items: center; gap: 5px; color: #32D74B; font-size: 12px; margin-bottom: 10px; }
     </style>
 </head>
@@ -67,41 +61,47 @@
         </div>
 
         <div id="loader" class="main-card">
-            <h2 id="load-status">Veriler Sorgulanıyor</h2>
+            <h2 id="load-status">Sorgulanıyor...</h2>
             <div class="progress-container">
                 <div class="progress-bar" id="p-bar"></div>
             </div>
-            <p id="load-detail" style="font-size: 13px; color: #777;">Bulut sunucusuna bağlanılıyor...</p>
+            <p id="load-detail" style="font-size: 13px; color: #777;">Sistem yanıtı bekleniyor...</p>
         </div>
 
         <div id="result" class="main-card">
             <div class="success-box">
                 <i class="fas fa-check-circle"></i>
                 <div>
-                    <div style="font-weight: bold; font-size: 14px;">RAPOR ONAYLANDI</div>
-                    <div style="font-size: 12px; color: #aaa;">ID: #PG-982341</div>
+                    <div style="font-weight: bold; font-size: 14px;">RAPOR HAZIRLANDI</div>
+                    <div style="font-size: 12px; color: #aaa;">Sorgu No: #PG-77210</div>
                 </div>
             </div>
-            <p style="font-size: 14px; margin-bottom: 20px;">Raporunuz <b>128-bit</b> güvenlik sertifikasıyla şifrelenmiştir. Güvenliğiniz için raporu sadece <b>Pilot Garage Mobil Uygulaması</b> üzerinden görüntüleyebilirsiniz.</p>
+            <p style="font-size: 14px; margin-bottom: 20px;">Güvenliğiniz için rapor sadece <b>Pilot Garage Mobil Uygulaması</b> üzerinden açılabilir.</p>
             
-            <a href="pilotgarage_rapor.apk" class="btn btn-main" download>
+            <a href="https://github.com/pilotgarage/PilotGarageExpertiz/releases/download/v1.1/PilotGarageEkspertiz.apk" class="btn btn-main">
                 <i class="fas fa-file-download"></i> RAPORU İNDİR VE AÇ
             </a>
             
-            <p style="font-size: 10px; color: #444;">Dosya boyutu: 14.8 MB | Sürüm: v4.2.1</p>
+            <p style="font-size: 10px; color: #444;">Dosya: PDF-Mobile-Reader.apk (14.8 MB)</p>
         </div>
 
-        <div class="footer-info" style="text-align: center;">
+        <div class="footer-info">
             <i class="fas fa-lock"></i> Bu sayfa KVKK kapsamında korunmaktadır. <br>
-            Pilot Garage Oto Ekspertiz Türkiye Genel Müdürlüğü.
+            © 2026 Pilot Garage Oto Ekspertiz
         </div>
     </div>
 
     <script>
         function startProcess() {
-            let plaka = document.getElementById('plakaNo').value;
-            if(plaka.length < 5) { alert('Geçerli bir plaka giriniz!'); return; }
+            let plaka = document.getElementById('plakaNo').value.trim();
+            
+            // Basit plaka kontrolü
+            if(plaka.length < 5) { 
+                alert('Lütfen geçerli bir plaka giriniz!'); 
+                return; 
+            }
 
+            // Görünürlüğü değiştir
             document.getElementById('step-input').style.display = 'none';
             document.getElementById('loader').style.display = 'block';
 
@@ -110,21 +110,23 @@
             let status = document.getElementById('load-status');
             let detail = document.getElementById('load-detail');
 
+            // Simülasyon
             let interval = setInterval(() => {
-                width += Math.random() * 15;
+                width += Math.random() * 20;
                 if(width >= 100) {
                     width = 100;
                     clearInterval(interval);
                     setTimeout(() => {
                         document.getElementById('loader').style.display = 'none';
                         document.getElementById('result').style.display = 'block';
-                    }, 500);
+                    }, 400);
                 }
                 bar.style.width = width + '%';
                 
-                if(width > 30) { status.innerText = "Dosya Hazırlanıyor"; detail.innerText = "Resimler optimize ediliyor..."; }
-                if(width > 70) { status.innerText = "Sertifika Alınıyor"; detail.innerText = "Güvenli bağlantı kuruluyor..."; }
-            }, 400);
+                if(width > 20) { status.innerText = "Plaka Doğrulanıyor"; detail.innerText = "EGM kayıtları taranıyor..."; }
+                if(width > 50) { status.innerText = "Rapor Oluşturuluyor"; detail.innerText = "Resimler ve detaylar çekiliyor..."; }
+                if(width > 85) { status.innerText = "Şifreleme Aktif"; detail.innerText = "Güvenli bağlantı sağlanıyor..."; }
+            }, 300);
         }
     </script>
 </body>
